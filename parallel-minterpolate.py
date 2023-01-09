@@ -56,7 +56,7 @@ f.close()
 # write batch file
 f = open(f"{args['o, __outputDir']}/run.bat", 'x')
 f.write(
-    f"ffmpeg -i .{args['inputVideo'].name} -c copy -map 0 -segment_time {partsTime} -f segment -reset_timestamps 1 output%%03d.mp4\n")
+    f"ffmpeg -i \".{args['inputVideo'].name}\" -c copy -map 0 -segment_time {partsTime} -f segment -reset_timestamps 1 output%%03d.mp4\n")
 
 # launch all ffmpeg tasks in parallel
 # continue only when everything is finished
